@@ -16,12 +16,15 @@ module.exports = async function nuxtTagManager(_options) {
   })
 
   // Don't include when run in dev mode unless dev: true is configured
-  if (this.options.dev && !options.dev) {
+ console.log(options) 
+ if (this.options.dev && !options.dev) {
+    console.log('returnig due to dev environment')
     return
   }
 
   // Don't include when no GTM id is given
   if (!options.id) {
+    console.log('id not found')
     return
   }
 
